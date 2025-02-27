@@ -47,10 +47,11 @@ const getFilteredProducts = async (req, res) => {
       data: products,
     });
   } catch (e) {
-    console.log(error);
+    // console.log(error);
     res.status(500).json({
       success: false,
       message: "Some error occured",
+      error: e,
     });
   }
 };
@@ -71,10 +72,11 @@ const getProductDetails = async (req, res) => {
       data: product,
     });
   } catch (e) {
-    console.log(error);
+    // console.log(error);
     res.status(500).json({
       success: false,
       message: "Some error occured",
+      error: e,
     });
   }
 };

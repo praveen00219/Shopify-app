@@ -43,10 +43,11 @@ const addToCart = async (req, res) => {
       data: cart,
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.status(500).json({
       success: false,
       message: "Error",
+      error: error,
     });
   }
 };
@@ -100,10 +101,11 @@ const fetchCartItems = async (req, res) => {
       },
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.status(500).json({
       success: false,
       message: "Error",
+      error: error,
     });
   }
 };
@@ -163,10 +165,11 @@ const updateCartItemQty = async (req, res) => {
       },
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.status(500).json({
       success: false,
       message: "Error",
+      error: error,
     });
   }
 };
@@ -221,10 +224,11 @@ const deleteCartItem = async (req, res) => {
       },
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.status(500).json({
       success: false,
       message: "Error",
+      error: error,
     });
   }
 };
